@@ -31,17 +31,17 @@ public class RegisterServlet extends HttpServlet {
 		user.setFirmname(request.getParameter("firmname"));
 		user.setEmailid(request.getParameter("useremail"));
 		user.setMobile(request.getParameter("mobile"));
+		user.setUserstate(request.getParameter("userstate"));
 		user.setPassword(request.getParameter("password"));
 		if (dao.checkuser(user, s)) {
 			if (dao.saveUser(user)) {
-                            if(dao.checkUserByEmailAndPassword(user.getEmailid(), user.getPassword(), s)){
-				Message msg = new Message("Successfully Registered!", "success", "alert-success");
-				s.setAttribute("msg", msg);
-                            }
-                            else{
-                            	Message msg = new Message("Registered Successfully! Please Login", "success", "alert-success");
-				s.setAttribute("msg", msg);
-                            }
+				if (dao.checkUserByEmailAndPassword(user.getEmailid(), user.getPassword(), s)) {
+					Message msg = new Message("Successfully Registered!", "success", "alert-success");
+					s.setAttribute("msg", msg);
+				} else {
+					Message msg = new Message("Registered Successfully! Please Login", "success", "alert-success");
+					s.setAttribute("msg", msg);
+				}
 			} else {
 				out.println("error");
 				return;

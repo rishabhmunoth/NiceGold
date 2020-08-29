@@ -9,18 +9,30 @@ public class User {
 	private String emailid;
 	private String userrole;
 	private String password;
+	private String userstate;
+
+	public String getUserstate() {
+		return userstate;
+	}
+
+	public void setUserstate(String userstate) {
+		this.userstate = userstate;
+	}
 
 	public User() {
 		super();
 	}
 
-	public User(String username, String firmname, String mobile, String emailid, String password) {
+	public User(String username, String firmname, String mobile, String emailid, String userrole, String password,
+			String userstate) {
 		super();
 		this.username = username;
 		this.firmname = firmname;
 		this.mobile = mobile;
 		this.emailid = emailid;
+		this.userrole = userrole;
 		this.password = password;
+		this.userstate = userstate;
 	}
 
 	public User(int userid, String username, String firmname, String mobile, String emailid, String userrole,
