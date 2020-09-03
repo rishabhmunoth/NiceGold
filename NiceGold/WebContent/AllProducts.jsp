@@ -44,18 +44,17 @@
                             <img class="card-img-top img-fluid img-responsive" style="max-height:300px; width:auto;" src="Product<%=File.separator + p.getProductsrc() + File.separator + p.getProductid()%>" alt="Card image cap">
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-success" method="delete">Add To Cart</button>
+                            <button class="btn btn-success" onclick="addtocart(<%=user.getUserid()%>,<%=p.getProductid()%>,<%=p.getProductsrc()%>)" >Add To Cart</button>
                         </div>
                     </div>
                 </div>
-
                 <% }
             }%>
             </div>
         </div>
-
         <!--card deck ends-->
-
-
+        <script>
+        
+        </script>
     </body>
 </html>

@@ -4,60 +4,69 @@ import java.security.Timestamp;
 
 public class Product {
 
-    private String productid;
-    private String productsrc;
-    private String productcat;
-    private int catid;
-    private Timestamp addtime;
+	private String productid;
+	private String productsrc;
+	private String productcat;
+	private int catid;
+	private Timestamp addtime;
+	private boolean addedtocart;
 
-    public String getProductcat() {
-        return productcat;
-    }
+	public boolean isAddedtocart() {
+		return addedtocart;
+	}
 
-    public void setProductcat(String productcat) {
-        this.productcat = productcat;
-    }
+	public void setAddedtocart(boolean addedtocart) {
+		this.addedtocart = addedtocart;
+	}
 
-    public Product(String productid, String productsrc, String productcat, int catid) {
-        this.productid = productid;
-        this.productsrc = productsrc;
-        this.productcat = productcat;
-        this.catid = catid;
-    }
+	public String getProductcat() {
+		return productcat;
+	}
 
-    public String getProductid() {
-        return productid;
-    }
+	public void setProductcat(String productcat) {
+		this.productcat = productcat;
+	}
 
-    public void setProductid(String productid) {
-        this.productid = productid;
-    }
+	public Product(String productid, String productsrc, String productcat, int catid) {
+		this.productid = productid;
+		this.productsrc = productsrc;
+		this.productcat = productcat;
+		this.catid = catid;
+	}
 
-    public String getProductsrc() {
-        return productsrc;
-    }
+	public String getProductid() {
+		return productid;
+	}
 
-    public void setProductsrc(String productsrc) {
-        this.productsrc = productsrc;
-    }
+	public void setProductid(String productid) {
+		this.productid = productid;
+	}
 
-    public int getCatid() {
-        return catid;
-    }
+	public String getProductsrc() {
+		return productsrc;
+	}
 
-    public void setCatid(int catid) {
-        this.catid = catid;
-    }
+	public void setProductsrc(String productsrc) {
+		this.productsrc = productsrc;
+	}
 
-    public Timestamp getAddtime() {
-        return addtime;
-    }
+	public int getCatid() {
+		return catid;
+	}
 
-    public void setAddtime(Timestamp addtime) {
-        this.addtime = addtime;
-    }
+	public void setCatid(int catid) {
+		this.catid = catid;
+	}
 
-    public Product() {
-        super();
-    }
+	public Timestamp getAddtime() {
+		return addtime;
+	}
+
+	public void setAddtime(Timestamp addtime) {
+		this.addtime = addtime;
+	}
+
+	public Product() {
+		super();
+	}
 }

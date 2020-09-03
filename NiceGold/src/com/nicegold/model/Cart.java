@@ -2,16 +2,33 @@ package com.nicegold.model;
 
 public class Cart {
 
-	private String userid;
+	private int userid;
 	private String productid;
+	private int qty;
+	private String productcat;
 	private String productsrc;
-	private int catid;
 
-	public String getUserid() {
+	public String getProductcat() {
+		return productcat;
+	}
+
+	public void setProductcat(String productcat) {
+		this.productcat = productcat;
+	}
+
+	public int getQty() {
+		return qty;
+	}
+
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+
+	public int getUserid() {
 		return userid;
 	}
 
-	public void setUserid(String userid) {
+	public void setUserid(int userid) {
 		this.userid = userid;
 	}
 
@@ -31,24 +48,16 @@ public class Cart {
 		this.productsrc = productsrc;
 	}
 
-	public int getCatid() {
-		return catid;
-	}
-
-	public void setCatid(int catid) {
-		this.catid = catid;
-	}
-
-	public Cart(String userid, String productid, String productsrc, int catid) {
-		super();
+	public Cart(int userid, String productid, int qty, String productcat, String productsrc) {
 		this.userid = userid;
 		this.productid = productid;
+		this.qty = qty;
+		this.productcat = productcat;
 		this.productsrc = productsrc;
-		this.catid = catid;
 	}
 
 	public Cart() {
-		super();
+
 	}
 
 }
